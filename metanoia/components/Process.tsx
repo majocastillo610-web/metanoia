@@ -68,10 +68,9 @@ export default function Process() {
         {/* Imagen de cierre cálida con personas */}
         <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 bg-arena">
           <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            src="/foto3.jpg"
             alt="Equipo Metanoia trabajando juntos"
             className="w-full h-full object-cover"
-            loading="lazy"
           />
           <div className="absolute inset-0 bg-carbon/50 flex flex-col items-center justify-center text-center px-6">
             <p className="section-label text-marfil/60 mb-3">¿Listo para empezar?</p>

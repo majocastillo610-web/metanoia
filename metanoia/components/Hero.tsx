@@ -11,12 +11,12 @@ export default function Hero() {
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl block">transformación</span>
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl block">que tu negocio</span>
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl block text-oliva">
-                necesitaba<span className="text-rosa">.</span>
+                necesita<span className="text-rosa">.</span>
               </span>
             </h1>
 
             <p className="text-piedra text-base md:text-lg leading-relaxed mb-4 font-sans">
-              Transformamos tu presencia digital en un motor de crecimiento real y medible.
+              Transformamos tu presencia digital en oportunidades de ventas.
             </p>
 
             <p className="text-carbon font-serif text-lg md:text-xl italic mb-10">
@@ -43,10 +43,9 @@ export default function Hero() {
             {/* Imagen principal con rostro cálido */}
             <div className="relative rounded-2xl overflow-hidden h-72 md:h-96 bg-arena">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/foto1.jpg"
                 alt="Profesional de marketing digital"
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
 
@@ -71,7 +70,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="font-semibold text-carbon text-sm">Auditoría gratuita disponible</p>
-                <p className="text-piedra text-xs mt-0.5">Sin costo · Sin compromiso · En 24 hs</p>
+                <p className="text-piedra text-xs mt-0.5">Sin costo · Sin compromiso</p>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ export default function Platforms() {
     <section className="py-12 px-6 bg-marfil border-y border-arena">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="section-label">Pauta en las plataformas que más importan</p>
+          <p className="section-label">Pauta en las principales plataformas</p>
           <div className="flex flex-wrap justify-center md:justify-end gap-3">
             {["Meta Ads", "Google Ads", "TikTok Ads"].map((p) => (
               <span
