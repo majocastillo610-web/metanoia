@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Platforms from "@/components/Platforms";
+import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import Process from "@/components/Process";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Platforms />
+        <AboutUs />
         <Services />
         <WhyUs />
         <Process />
