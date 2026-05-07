@@ -1,73 +1,76 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background glow effects */}
-      <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="min-h-screen flex items-center pt-24 pb-16 px-6 bg-marfil">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="section-label mb-6">Paraguay · Marketing Digital</p>
 
-      {/* Grid lines decoration */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#8B5CF6 1px, transparent 1px), linear-gradient(90deg, #8B5CF6 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
+            <h1 className="font-serif font-bold text-carbon leading-[1.1] mb-6">
+              <span className="text-5xl md:text-6xl lg:text-7xl block">La transformación</span>
+              <span className="text-5xl md:text-6xl lg:text-7xl block">que tu negocio</span>
+              <span className="text-5xl md:text-6xl lg:text-7xl block text-oliva">necesitaba<span className="text-rosa">.</span></span>
+            </h1>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#12121E] border border-[#1E1E30] rounded-full px-4 py-2 mb-8">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-gray-400 text-sm">Agencia Digital — Transformamos tu marca</span>
-        </div>
+            <p className="text-piedra text-lg leading-relaxed mb-4 max-w-md font-sans">
+              Transformamos tu presencia digital en un motor de crecimiento real y medible.
+            </p>
 
-        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-          Tu negocio merece
-          <br />
-          <span className="gradient-text">crecer en digital</span>
-        </h1>
+            <p className="text-carbon font-serif text-xl italic mb-10">
+              "Estrategia que conecta. Pauta que convierte."
+            </p>
 
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          En <strong className="text-white">Metanoia</strong> transformamos tu presencia digital con estrategia real,
-          contenido que conecta y pauta que convierte. Del punto A al punto{" "}
-          <span className="text-violet-400 font-semibold">extraordinario</span>.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#auditoria"
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-pink-600 text-white font-bold px-8 py-4 rounded-full text-base hover:opacity-90 transition-opacity glow-purple"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-            Solicitar auditoría gratuita
-          </a>
-          <a
-            href="#servicios"
-            className="inline-flex items-center justify-center gap-2 bg-[#12121E] border border-[#1E1E30] text-white font-semibold px-8 py-4 rounded-full text-base hover:border-violet-500 transition-colors"
-          >
-            Ver servicios
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { value: "100+", label: "Clientes activos" },
-            { value: "3x", label: "ROI promedio" },
-            { value: "Meta • Google • TikTok", label: "Plataformas de pauta" },
-            { value: "360°", label: "Servicio integral" },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-[#12121E] border border-[#1E1E30] rounded-2xl p-4">
-              <div className="text-white font-black text-xl md:text-2xl mb-1">{stat.value}</div>
-              <div className="text-gray-500 text-xs">{stat.label}</div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="#auditoria"
+                className="inline-flex items-center justify-center bg-carbon text-marfil font-semibold px-8 py-4 rounded-full text-sm hover:bg-oliva transition-colors"
+              >
+                Solicitar auditoría gratuita
+              </a>
+              <a
+                href="#servicios"
+                className="inline-flex items-center justify-center border border-carbon text-carbon font-semibold px-8 py-4 rounded-full text-sm hover:bg-hueso transition-colors"
+              >
+                Ver servicios
+              </a>
             </div>
-          ))}
+          </div>
+
+          <div className="hidden md:flex flex-col gap-5">
+            <div className="bg-carbon text-marfil rounded-2xl p-8">
+              <p className="font-serif text-3xl font-bold leading-snug mb-4">
+                No hacemos marketing para acumular likes<span className="text-rosa">.</span>
+              </p>
+              <p className="text-hueso text-sm leading-relaxed font-sans">
+                Construimos sistemas comerciales sobre cimientos sólidos, identidad coherente y resultados orientados a ventas.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { val: "Marcas", desc: "Nuestro foco" },
+                { val: "360°", desc: "Servicio integral" },
+                { val: "Real", desc: "Resultados medibles" },
+              ].map((s) => (
+                <div key={s.desc} className="bg-hueso rounded-xl p-4 text-center">
+                  <div className="font-serif font-bold text-carbon text-lg mb-1">{s.val}</div>
+                  <div className="text-piedra text-xs font-sans">{s.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-rosa/15 border border-rosa/30 rounded-xl p-5 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-rosa/20 flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-rosa" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold text-carbon text-sm">Auditoría gratuita disponible</p>
+                <p className="text-piedra text-xs mt-0.5">Sin costo · Sin compromiso · En 24 hs</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
