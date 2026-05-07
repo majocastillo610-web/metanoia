@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Metanoia — Agencia Digital",
+  title: "Metanoia. — Marketing con propósito",
   description:
-    "Transformamos tu presencia digital con estrategia, contenido y pauta. Auditoría gratuita, consultoría digital, packs de contenido y pauta en Meta, Google y TikTok.",
+    "Transformamos la presencia digital de tu negocio en un motor de crecimiento real y medible. Estrategia que conecta. Pauta que convierte.",
   keywords:
-    "agencia digital, marketing digital, pauta digital, meta ads, google ads, tiktok ads, contenido digital, consultoría digital",
+    "agencia digital paraguay, marketing digital, meta ads, google ads, tiktok ads, consultoría digital, contenido digital",
   openGraph: {
-    title: "Metanoia — Agencia Digital",
-    description: "Transformamos tu presencia digital.",
+    title: "Metanoia. — Marketing con propósito",
+    description: "Estrategia que conecta. Pauta que convierte.",
     type: "website",
   },
 };
