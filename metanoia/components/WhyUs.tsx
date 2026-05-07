@@ -1,81 +1,84 @@
+const values = [
+  { dot: "bg-oliva", label: "Verdad" },
+  { dot: "bg-rosa", label: "Integridad" },
+  { dot: "bg-oliva", label: "Excelencia" },
+  { dot: "bg-rosa", label: "Servicio" },
+  { dot: "bg-oliva", label: "Resultados" },
+];
+
 const reasons = [
   {
-    icon: "🎯",
-    title: "Foco en resultados reales",
-    description:
-      "No trabajamos por vanity metrics. Cada acción está orientada a resultados que impactan en tu negocio: leads, ventas, comunidad y reconocimiento.",
-  },
-  {
-    icon: "🔍",
     title: "Comenzamos con un diagnóstico",
-    description:
-      "Antes de proponer cualquier solución, auditamos tu situación actual. Sin contexto no hay estrategia. Por eso la auditoría es gratis.",
+    description: "Antes de proponer cualquier solución, auditamos tu situación actual. Sin contexto no hay estrategia. Por eso la auditoría es gratis.",
   },
   {
-    icon: "⚡",
+    title: "Foco en resultados reales",
+    description: "No trabajamos por vanity metrics. Cada acción está orientada a resultados que impactan en tu negocio: leads, ventas y reconocimiento.",
+  },
+  {
     title: "Equipo especializado",
-    description:
-      "Estrategas, diseñadores, redactores y media buyers trabajando de forma coordinada. Sin intermediarios ni tercerización.",
+    description: "Estrategas, diseñadores, redactores y media buyers trabajando de forma coordinada. Sin intermediarios ni tercerización.",
   },
   {
-    icon: "📊",
     title: "Transparencia total",
-    description:
-      "Accedés a reportes claros, dashboard en tiempo real y reuniones de seguimiento. Siempre sabés qué está pasando con tu inversión.",
-  },
-  {
-    icon: "🚀",
-    title: "Escalamos con vos",
-    description:
-      "Nuestros servicios crecen con tu negocio. Empezás por donde podés y escalás hacia el servicio integral cuando estés listo.",
-  },
-  {
-    icon: "🤝",
-    title: "Relación a largo plazo",
-    description:
-      "No buscamos clientes de un mes. Construimos relaciones de confianza donde nos convertimos en tu equipo de marketing de cabecera.",
+    description: "Accedés a reportes claros y reuniones de seguimiento. Siempre sabés qué está pasando con tu inversión.",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section id="por-que" className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
-
+    <section id="por-que" className="py-24 px-6 bg-hueso">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="divider mb-16" />
+
+        <div className="grid md:grid-cols-2 gap-20">
           <div>
-            <span className="text-pink-400 text-sm font-semibold uppercase tracking-widest mb-3 block">
-              Por qué elegirnos
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
-              Metanoia significa{" "}
-              <span className="gradient-text">transformación</span>
+            <p className="section-label mb-3">Por qué elegirnos</p>
+            <h2 className="font-serif font-bold text-carbon text-4xl md:text-5xl leading-tight mb-6">
+              Marketing que<br />transforma, no<br />que promete<span className="text-rosa">.</span>
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              El nombre no es casualidad. <strong className="text-white">Metanoia</strong> es el cambio profundo de
-              perspectiva que te lleva a ver y hacer las cosas diferente. Eso es lo que generamos en la presencia
-              digital de nuestros clientes.
+
+            <p className="text-piedra leading-relaxed mb-8 font-sans">
+              Del griego <em className="text-carbon font-medium">metánoia</em> — cambio profundo de mente y dirección. No un ajuste: una transformación real. Quien trabaja con Metanoia no queda igual.
             </p>
-            <a
-              href="#auditoria"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-pink-600 text-white font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Empezar ahora — es gratis
-            </a>
+
+            <blockquote className="border-l-2 border-rosa pl-5 mb-10">
+              <p className="font-serif italic text-carbon text-lg leading-relaxed">
+                "Por sus frutos los conoceréis. Marketing que transforma, no que promete."
+              </p>
+            </blockquote>
+
+            <div className="flex flex-wrap gap-3">
+              {values.map((v) => (
+                <div key={v.label} className="flex items-center gap-2">
+                  <div className={`w-2 h-2 rounded-full ${v.dot}`} />
+                  <span className="text-sm font-medium text-carbon font-sans">{v.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {reasons.map((r) => (
-              <div
-                key={r.title}
-                className="bg-[#12121E] border border-[#1E1E30] hover:border-violet-500/30 rounded-2xl p-5 transition-all duration-300"
-              >
-                <div className="text-3xl mb-3">{r.icon}</div>
-                <h3 className="text-white font-bold text-sm mb-2">{r.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{r.description}</p>
+          <div className="flex flex-col gap-4">
+            {reasons.map((r, i) => (
+              <div key={r.title} className="bg-marfil rounded-xl p-6 border border-arena">
+                <div className="flex items-start gap-4">
+                  <span className="font-serif font-bold text-rosa text-2xl leading-none mt-0.5">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-serif font-bold text-carbon text-lg mb-2">{r.title}</h3>
+                    <p className="text-piedra text-sm leading-relaxed font-sans">{r.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
+
+            <a
+              href="#auditoria"
+              className="mt-2 bg-carbon text-marfil font-semibold px-7 py-4 rounded-full text-sm hover:bg-oliva transition-colors text-center"
+            >
+              Empezar con una auditoría gratuita →
+            </a>
           </div>
         </div>
       </div>
