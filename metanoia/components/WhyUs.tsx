@@ -31,6 +31,21 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto">
         <div className="divider mb-16" />
 
+        {/* Imagen de equipo full-width arriba */}
+        <div className="relative rounded-2xl overflow-hidden h-56 md:h-72 mb-16 bg-arena">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            alt="Equipo trabajando con entusiasmo"
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-carbon/40 flex items-end p-8">
+            <p className="font-serif italic text-marfil text-xl md:text-2xl max-w-lg">
+              "Por sus frutos los conoceréis. Marketing que transforma, no que promete."
+            </p>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="section-label mb-3">Por qué elegirnos</p>
@@ -42,22 +57,7 @@ export default function WhyUs() {
               Del griego <em className="text-carbon font-medium">metánoia</em> — cambio profundo de mente y dirección. No un ajuste: una transformación real. Quien trabaja con Metanoia no queda igual.
             </p>
 
-            <blockquote className="border-l-2 border-rosa pl-5 mb-8">
-              <p className="font-serif italic text-carbon text-lg leading-relaxed">
-                "Por sus frutos los conoceréis. Marketing que transforma, no que promete."
-              </p>
-            </blockquote>
-
-            {/* Imagen */}
-            <div className="rounded-2xl overflow-hidden h-56 md:h-64 mb-8">
-              <img
-                src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80&auto=format&fit=crop"
-                alt="Equipo trabajando en estrategia digital"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-8">
               {values.map((v) => (
                 <div key={v.label} className="flex items-center gap-2">
                   <div className={`w-2 h-2 rounded-full ${v.dot}`} />
@@ -65,9 +65,16 @@ export default function WhyUs() {
                 </div>
               ))}
             </div>
+
+            <a
+              href="#auditoria"
+              className="inline-flex bg-carbon text-marfil font-semibold px-7 py-4 rounded-full text-sm hover:bg-oliva transition-colors font-sans"
+            >
+              Empezar con una auditoría gratuita →
+            </a>
           </div>
 
-          <div className="flex flex-col gap-4 md:pt-20">
+          <div className="flex flex-col gap-4">
             {reasons.map((r, i) => (
               <div key={r.title} className="bg-marfil rounded-xl p-6 border border-arena">
                 <div className="flex items-start gap-4">
@@ -81,13 +88,6 @@ export default function WhyUs() {
                 </div>
               </div>
             ))}
-
-            <a
-              href="#auditoria"
-              className="mt-2 bg-carbon text-marfil font-semibold px-7 py-4 rounded-full text-sm hover:bg-oliva transition-colors text-center font-sans"
-            >
-              Empezar con una auditoría gratuita →
-            </a>
           </div>
         </div>
       </div>

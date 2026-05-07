@@ -40,17 +40,17 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-5">
-            {/* Imagen principal */}
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80">
+            {/* Imagen principal con rostro cálido */}
+            <div className="relative rounded-2xl overflow-hidden h-72 md:h-96 bg-arena">
               <img
-                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80&auto=format&fit=crop"
-                alt="Estrategia digital"
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Profesional de marketing digital"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-carbon/20" />
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-3">
               {[
                 { val: "Marcas", desc: "Nuestro foco" },
                 { val: "360°", desc: "Servicio integral" },
